@@ -5,8 +5,8 @@ import 'package:gtech_project/Datas/Datas.dart';
 
 List<Datas> datasParse(String bodyResponse) {
   var list = json.decode(bodyResponse) as List<dynamic>;
-  List<Datas> photos = list.map((dts) => Datas.fromJson(dts)).toList();
-  return photos;
+  List<Datas> datas = list.map((dts) => Datas.fromJson(dts)).toList();
+  return datas;
 }
 
 Future<List<Datas>> datasFetch() async {
