@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
           borderRadius: BorderRadius.circular(15.0),
         ),
         child: FutureBuilder(
-          future: photosFetch(),
+          future: datasFetch(),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(

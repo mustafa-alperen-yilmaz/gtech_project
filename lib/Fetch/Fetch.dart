@@ -9,7 +9,7 @@ List<Datas> photosParse(String bodyResponse) {
   return photos;
 }
 
-Future<List<Datas>> photosFetch() async {
+Future<List<Datas>> datasFetch() async {
   final fetchResponse =
       await http.get(Uri.parse("https://jsonplaceholder.typicode.com/photos"));
   if (fetchResponse.statusCode == 200) {
