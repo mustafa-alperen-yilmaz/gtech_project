@@ -1,16 +1,9 @@
 # gtech_project
 
-A new Flutter project.
+Gtech Akademi tarafindan verilen ödev projesidir.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Uygulama flutter üzerinden geliştirilmiştir. Uygulamada  api'den gelen veri ile liste oluşmaktadır. Ana sayfamızda bu liste görüntülenmektedir. Eğer listeden herhangi bir elemana basarsak o elemanın detay sayfasına ulaşırız detay sayfasında ise büyük resim ve başlık gözükmektedir. Eğer kullanıcı listedeki elemana basılı tutarsa o eleman gizlenir not: (uygulama tekrar açıldığında eleman tekrar görüntülenebilir).
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Uygulamanın tesleri Android üzerinde yapılmıştır (Pixel 2 API 33 emulator).
