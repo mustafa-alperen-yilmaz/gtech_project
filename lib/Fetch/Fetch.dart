@@ -9,6 +9,7 @@ List<Datas> datasParse(String bodyResponse) {
   return datas;
 }
 
+// fetching the data
 Future<List<Datas>> datasFetch() async {
   final fetchResponse =
       await http.get(Uri.parse("https://jsonplaceholder.typicode.com/photos"));

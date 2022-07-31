@@ -1,4 +1,5 @@
 // !! While creating these classes, https://javiercbk.github.io/json_to_dart/ site was used.
+// created the all classes
 class Datas {
   int? albumId;
   int? id;

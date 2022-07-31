@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:gtech_project/Fetch/Fetch.dart';
 import 'package:gtech_project/InsideOfDatas/InsideOfDatas.dart';
@@ -32,11 +31,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // identfy the variables
+  // define the variables
   String appBarTitle = " Gtech Academy ";
   String message =
       "wait for a while (10 sec.) if list does not seem it will be empty";
   String hyphen = " -- ";
+  // this list keeping the removed indexes
   List<int> removeIndex = [];
   @override
   Widget build(BuildContext context) {
@@ -60,11 +60,12 @@ class _HomePageState extends State<HomePage> {
                   String title = snapshot.data[index].id.toString() +
                       hyphen +
                       snapshot.data[index].title;
-                  if (removeIndex.contains(index))
+                  if (removeIndex.contains(index)) {
                     return Container();
-                  else {
+                  } else {
                     return ListTile(
                       title: Text(title),
+                      // if user click the element it will goes to detail of element which was clicked
                       onTap: () {
                         Navigator.push(
                             context,
@@ -72,6 +73,7 @@ class _HomePageState extends State<HomePage> {
                                 builder: (context) =>
                                     InsideOfDetails(snapshot.data[index])));
                       },
+                      // if user press longer the element it will be removed
                       onLongPress: () {
                         removeIndex.add(index);
                         setState(() {});
@@ -86,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.blue,
                 child: Text(
                   message,
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 20),

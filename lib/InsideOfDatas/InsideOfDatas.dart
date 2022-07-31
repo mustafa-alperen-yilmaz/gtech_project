@@ -7,6 +7,7 @@ class InsideOfDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // defining the local variables
     String detail = "Detail Page";
     return Scaffold(
       appBar: AppBar(
@@ -20,9 +21,10 @@ class InsideOfDetails extends StatelessWidget {
         children: [
           Text(
             dataData.title.toString(),
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
             textAlign: TextAlign.center,
           ),
+          // Show the image into details page
           Container(
             child: Align(
               alignment: Alignment.center,
